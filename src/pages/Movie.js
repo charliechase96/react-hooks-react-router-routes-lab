@@ -4,10 +4,18 @@ function Movie() {
   return (
     <>
       <header>
-        {/* What component should go here? */}
+        {<h1>Movies Page</h1>}
       </header>
       <main>
-        {/* Movie info here! */}
+        {movies.map((movie) => {
+          <div>
+            {movie.title}
+            {movie.time}
+            <ul>
+              <li>{movie.genres}</li>
+            </ul>
+          </div>
+        })}
       </main>
     </>
   );

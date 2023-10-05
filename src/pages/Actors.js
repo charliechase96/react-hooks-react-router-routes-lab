@@ -5,10 +5,17 @@ function Actors() {
   return (
     <>
       <header>
-        {/* What component should go here? */}
+        {<h1>Actors Page</h1>}
       </header>
       <main>
-        {/* Actor info here! */}
+        {actors.map((actor) => {
+          <div>
+            {actor.name}
+            <ul>
+              <li>{actor.movies}</li>
+            </ul>
+          </div>
+        })}
       </main>
     </>
   );

@@ -1,14 +1,21 @@
-import { directors } from "../data";
+import { directors, movies } from "../data";
 
 function Directors() {
   
   return (
     <>
       <header>
-        {/* What component should go here? */}
+        {<h1>Directors Page</h1>}
       </header>
       <main>
-        {/* Director info here! */}
+        {directors.map((director) => {
+          <div>
+            {director.name}
+            <ul>
+              <li>{director.movies}</li>
+            </ul>
+          </div>
+        })}
       </main>
     </>
   );
